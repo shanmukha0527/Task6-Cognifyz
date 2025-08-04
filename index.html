@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Cognifyz Internship</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cognifyz Technologies</h1>
+            <p class="subtitle">Get in Touch With Us</p>
+        </header>
+
+        <main>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnnzdend" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <span class="error-message" id="firstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <span class="error-message" id="lastNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" min="18" max="100" required>
+                    <span class="error-message" id="ageError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position of Interest</label>
+                    <select id="position" name="position">
+                        <option value="">Select a position</option>
+                        <option value="intern">Intern</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="analyst">Data Analyst</option>
+                        <option value="manager">Project Manager</option>
+                    </select>
+                    <span class="error-message" id="positionError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" name="experience" min="0" max="50">
+                    <span class="error-message" id="experienceError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Technical Skills</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="html">
+                            <span class="checkmark"></span>
+                            HTML/CSS
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="javascript">
+                            <span class="checkmark"></span>
+                            JavaScript
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="python">
+                            <span class="checkmark"></span>
+                            Python
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="java">
+                            <span class="checkmark"></span>
+                            Java
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="react">
+                            <span class="checkmark"></span>
+                            React
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="nodejs">
+                            <span class="checkmark"></span>
+                            Node.js
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="availability" value="immediate" required>
+                            <span class="radio-mark"></span>
+                            Immediate
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="availability" value="2weeks" required>
+                            <span class="radio-mark"></span>
+                            2 Weeks Notice
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="availability" value="1month" required>
+                            <span class="radio-mark"></span>
+                            1 Month Notice
+                        </label>
+                    </div>
+                    <span class="error-message" id="availabilityError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message/Cover Letter</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about yourself and why you're interested in joining Cognifyz..."></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the Terms and Conditions and Privacy Policy *
+                    </label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                    <button type="reset" class="reset-btn">Clear Form</button>
+                </div>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h3>Application Submitted Successfully!</h3>
+                    <p>Thank you for your interest in Cognifyz Technologies. Your application has been sent and we'll review it shortly. You should receive a confirmation email soon.</p>
+                    <p><strong>What happens next?</strong></p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>You'll receive an email confirmation</li>
+                        <li>Our HR team will review your application</li>
+                        <li>We'll contact you within 3-5 business days</li>
+                    </ul>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Cognifyz Technologies. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
